@@ -26,7 +26,7 @@ ZBar is by far the best. It could decode everything I threw at it. The problem i
 
 Quirc works for the purposes I needed it for, and the API is super simple.
 
-libdecodeqr could barely decode even the basic things. I'm not too sure why it has so much trouble, even with flat out crisp generated QR codes.
+libdecodeqr could barely decode even the basic things. I'm not too sure why it has so much trouble, even with flat out crisp, generated QR codes.
 
 ### Request
 

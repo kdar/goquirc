@@ -72,6 +72,21 @@ func (d *Decoder) Destroy() {
 
 // var tmptest = 0
 
+// DecodeBytes decodes the data in the passed image and returns
+// any bytes encoded in it.
+func (d *Decoder) DecodeBytes(img image.Image) ([]byte, error) {
+	datas, err := d.Decode(img)
+	if err != nil {
+		return nil, err
+	}
+
+	if datas != nil && len(datas) > 0 {
+		return []byte(datas[0].Payload[:datas[0].PayloadLen]), nil
+	}
+
+	return nil, nil
+}
+
 // Decode decodes the passed image and returns a slice of Data
 // structures of the found QR data.
 func (d *Decoder) Decode(img image.Image) ([]Data, error) {
