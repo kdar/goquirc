@@ -35,6 +35,7 @@ func main() {
 	}
 
 	d := goquirc.New()
+	defer d.Destroy()
 	datas, err := d.Decode(m)
 	if err != nil {
 		log.Fatal(path+":", err)

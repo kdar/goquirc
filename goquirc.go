@@ -57,12 +57,15 @@ type Decoder struct {
 	decoder *C.struct_quirc
 }
 
+// New creates a new decoder.
 func New() *Decoder {
 	return &Decoder{
 		decoder: C.quirc_new(),
 	}
 }
 
+// Destroy frees up the memory allocated by the decoder.
+// Call this when you're done decoding images.
 func (d *Decoder) Destroy() {
 	C.quirc_destroy(d.decoder)
 }

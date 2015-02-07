@@ -3,6 +3,8 @@ goquirc
 
 This is a simple wrapper around [Quirc](https://github.com/dlbeer/quirc).
 
+[http://godoc.org/github.com/kdar/goquirc](http://godoc.org/github.com/kdar/goquirc)
+
 ### Install
 
 1. `go get -d github.com/kdar/goquirc`
